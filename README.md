@@ -1,14 +1,41 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 📝 Redux Todo App (React Native)
 
-# Getting Started
+This is a **React Native To-Do List** project built using **Redux Toolkit** for state management.  
+It allows you to add, toggle, delete, and filter todos (All, Active, Completed) — all with a clean UI and persistent Redux state.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## ⚙️ Getting Started
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+> **Note:** Before proceeding, ensure you have completed the official React Native setup guide:  
+> 🔗 [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment)
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+---
+
+### Step 1: Clone the Repository
+
+```sh
+git clone https://github.com/OwenImudia-Humber/ReduxTodoAppLab6.git
+cd redux-todo-app
+```
+
+---
+
+### Step 2: Install Dependencies
+
+```sh
+# Using npm
+npm install
+
+# OR using Yarn
+yarn install
+```
+
+---
+
+### Step 3: Start Metro Bundler
+
+Metro is the JavaScript bundler for React Native.
 
 ```sh
 # Using npm
@@ -18,11 +45,11 @@ npm start
 yarn start
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+### Step 4: Run the App
 
-### Android
+#### Android
 
 ```sh
 # Using npm
@@ -32,23 +59,16 @@ npm run android
 yarn android
 ```
 
-### iOS
+#### iOS (Mac Only)
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+Make sure you have CocoaPods installed before running:
 
 ```sh
 bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
 bundle exec pod install
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+Then:
 
 ```sh
 # Using npm
@@ -58,40 +78,45 @@ npm run ios
 yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+---
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 🧠 Project Structure
 
-## Step 3: Modify your app
+```
+src/
+ ├── screens/
+ │    └── TodoListScreen.js      # Main connected component
+ ├── store/
+ │    ├── index.js               # Redux store configuration
+ │    └── todosSlice.js          # Slice containing state, actions, reducers
+App.js                           # Root component with Provider wrapper
+```
 
-Now that you have successfully run the app, let's make changes!
+---
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## 🧩 Features
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+✅ Add new todos  
+✅ Toggle completion status  
+✅ Delete todos  
+✅ Filter by All / Active / Completed  
+✅ Redux Toolkit for simplified state management  
+✅ React Hooks (`useSelector`, `useDispatch`)  
+✅ Clean Material Icons UI  
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+---
 
-## Congratulations! :tada:
+## 🧪 Testing Redux Implementation
 
-You've successfully run and modified your React Native App. :partying_face:
+```sh
+# Run app
+npx react-native run-android
+# OR
+npx react-native run-ios
 
-### Now what?
+---
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+## 🧑‍💻 Author
 
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Owen Imudia**  
+📧 [Imudiaowen@gmail.com](mailto:Imudiaowen@gmail.com) 
